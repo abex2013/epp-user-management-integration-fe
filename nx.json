@@ -1,0 +1,96 @@
+{
+  "npmScope": "exec-epp",
+  "affected": {
+    "defaultBase": "master"
+  },
+  "implicitDependencies": {
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
+    ".eslintrc.json": "*"
+  },
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@nrwl/workspace/tasks-runners/default",
+      "options": {
+        "cacheableOperations": ["build", "lint", "test", "e2e"]
+      }
+    }
+  },
+  "targetDependencies": {
+    "build": [
+      {
+        "target": "build",
+        "projects": "dependencies"
+      }
+    ]
+  },
+  "projects": {
+    "applicant-tracking": {
+      "tags": []
+    },
+    "applicant-tracking-e2e": {
+      "tags": [],
+      "implicitDependencies": ["applicant-tracking"]
+    },
+    "clientmanagement": {
+      "tags": []
+    },
+    "clientmanagement-e2e": {
+      "tags": [],
+      "implicitDependencies": ["clientmanagement"]
+    },
+    "configurationmodule": {
+      "tags": []
+    },
+    "configurationmodule-e2e": {
+      "tags": [],
+      "implicitDependencies": ["configurationmodule"]
+    },
+    "core-model": {
+      "tags": []
+    },
+    "epp-dashboard": {
+      "tags": []
+    },
+    "epp-dashboard-e2e": {
+      "tags": [],
+      "implicitDependencies": ["epp-dashboard"]
+    },
+    "ng-zorro": {
+      "tags": []
+    },
+    "projectmanagement": {
+      "tags": []
+    },
+    "projectmanagement-e2e": {
+      "tags": [],
+      "implicitDependencies": ["projectmanagement"]
+    },
+    "resourcemanagement": {
+      "tags": []
+    },
+    "resourcemanagement-e2e": {
+      "tags": [],
+      "implicitDependencies": ["resourcemanagement"]
+    },
+    "shared-components": {
+      "tags": []
+    },
+    "timesheet": {
+      "tags": []
+    },
+    "timesheet-e2e": {
+      "tags": [],
+      "implicitDependencies": ["timesheet"]
+    },
+    "usermanagement": {
+      "tags": []
+    },
+    "usermanagement-e2e": {
+      "tags": [],
+      "implicitDependencies": ["usermanagement"]
+    }
+  }
+}
